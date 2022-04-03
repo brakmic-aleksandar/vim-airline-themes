@@ -65,7 +65,7 @@ function! airline#themes#solarized#refresh()
   if s:background == 'dark'
     let s:N1 = [(s:dark_text ? s:base03 : s:base3), (s:use_green ? s:green : s:base1), 'bold']
     let s:N2 = [s:base2, (s:tty ? s:base01 : s:base00), '']
-    let s:N3 = [s:base01, s:base02, '']
+    let s:N3 = [s:base01, s:base03, '']
   else
     let s:N1 = [(s:dark_text ? s:base03 : s:base2), (s:use_green ? s:green : s:base00), 'bold']
     let s:N2 = [(s:tty ? s:base01 : s:base2), s:base1, '']
@@ -89,7 +89,7 @@ function! airline#themes#solarized#refresh()
   let s:IM = s:NM
 
   " Visual mode
-  let s:V1 = [s:N1[0], s:magenta, 'bold']
+  let s:V1 = [s:N1[0], s:blue, 'bold']
   let s:V2 = s:N2
   let s:V3 = s:N3
   let s:VF = s:NF
@@ -113,9 +113,9 @@ function! airline#themes#solarized#refresh()
   " (bg dark: base00; bg light: base0)
   if s:background == 'dark'
     if s:dark_inactive_border
-      let s:IA = [s:base01, s:base02, '']
+      let s:IA = [s:base01, s:base00, '']
     else
-      let s:IA = [s:base02, s:base00, '']
+      let s:IA = [s:base01, s:base03, '']
     endif
   else
     let s:IA = [s:base2, s:base0, '']
